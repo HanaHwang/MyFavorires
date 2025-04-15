@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Klee+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: maroon;
+    color: white;
+    font-family: "Klee One", cursive;
+}
+
+.logo{
+    font-family: "Babylonica", cursive;
+}
+
+html{
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 9%;
+    background-color: rgba(22, 22, 22, 0.95);
+    border-bottom: 2px solid #b74b4b;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    font-size: 1.6rem;
+    color: white;
+    margin-left: 2.5rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+section{
+    min-height: 100vh;
+    padding-bottom: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    background-color: black;
+}
+
+.home .home_content {
+    flex: 1;
+}
+
+.home .home_content h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: "Babylonica", cursive;
+    letter-spacing: 0.5rem;
+    color: #b74b4b;
+}
+
+.home_content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.home_content p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.home_img {
+    width: 20vw;
+    max-width: 400px;
+    border-radius: 50%;
+}
+
+.home_img img {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid #b74b4b;
+    cursor: pointer;
+    transition: transform 0.3 ease, border-color 0.3s ease;
+}
+
+.home_img img:hover {
+    transform: scale(1.05);
+    border-color: #fff;
+    animation: floatBob 1s ease infinite;
+}
+
+@keyframes floatBob{
+    0% { transform: scale(1.05) translateY(0);}
+    50% { transform: scale(1.06) translateY(-6px);}
+    100% { transform: scale(1.05) translateY(0);}
+}
+
+.animals {
+    padding: 40px 10px;
+    background-color: #b74b4b;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    border-top: 3px dashed #fff;
+}
+
+.animals h1{
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: "Babylonica", cursive;
+    letter-spacing: 0.5rem;
+    color: #161616;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.animals h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: "Babylonica", cursive;
+    letter-spacing: 0.5rem;
+    color: #b74b4b;
+    text-align: center;
+    margin-bottom: 0.5px;
+}
+
+.animal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.animal-item {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    width: 280px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(91, 111, 167, 0.3);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animal-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(91, 111, 167, 0.4);
+}
+
+.animal-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.animal-item p {
+    font-size: 1.5rem;
+    color: black;
+    line-height: 1.6;
+    padding: 20px;
+    font-family: "Klee One", cursive;
+    background-color: whitesmoke;
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+}
+
+.animal-item:before {
+    content: '🐾';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-0%);
+    font-size: 4rem;
+}
+
+.music {
+    padding: 40px 10%;
+    background-color: #161616;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    border-top: 3px dashed #fff;
+}
+
+.music h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: "Babylonica", cursive;
+    letter-spacing: 0.5rem;
+    color: #b74b4b;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.song-list {
+    margin-bottom: 30px;
+    list-style: none;
+    padding: 0;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song-list:hover {
+    transform: scale(1.03);
+}
+
+.song-list iframe {
+    border-radius: 12px;
+    width: 100%;
+    height: 152px;
+    border: none;
+}
+
+.song-list p {
+    font-size: 1.5rem;
+    color: black;
+    line-height: 1.6;
+    padding: 20px;
+    font-family: "Klee One", cursive;
+    background-color: whitesmoke;
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+}
+
+.song-list p:hover {
+    color: #333;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .music {
+        padding: 40px 5%;
+    }
+    .song-list iframe {
+        height: 130px;
+    }
+    .music h2 {
+        font-size: 1.6rem;
+    }
+}
+
+.drinks {
+    padding: 40px 10px;
+    background-color: #b74b4b;
+    border-top: 3px dashed #fff;
+}
+
+.drinks h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: "Babylonica", cursive;
+    letter-spacing: 0.5rem;
+    color: #161616;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.drinks h2{
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: "Babylonica", cursive;
+    letter-spacing: 0.5rem;
+    color: #161616;
+    text-align: center;
+    margin-bottom: 0.5px;
+}
+
+.drink-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.drink-item {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(183, 75, 75, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.drink-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(183, 75, 75, 0.25);
+}
+
+.drink-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.drink-item p {
+    font-size: 1.3rem;
+    color: black;
+    line-height: 1.6;
+    font-family: "Klee One", cursive;
+}
+
+.activities {
+    padding: 40rem 10%;
+    background-color: #161616;
+    border-top: 3px dashed #fff;
+}
+
+.activities h1{
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: "babylonica", cursive;
+    letter-spacing: 0.5rem;
+    color: #b74b4b;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.activities h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: "Babylonica", cursive;
+    letter-spacing: 0.5rem;
+    color: #b74b4b;
+    text-align: center;
+    margin-bottom: 0.5px;
+}
+
+.activity-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.activity-item {
+    background-color: #fff;
+    width: 250px;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(137, 182, 182, 0.2);
+    border-left: 5px solid #b74b4b;
+    transition: transform 0.3s ease;
+}
+
+.activity-item:hover {
+    transform: translateY(-8px);
+}
+
+.activity-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.activity-item p {
+    font-family: "Klee One", cursive;
+    font-size: 1.3rem;
+    color: black;
+    text-align: center;
+}
+
+.plush {
+    padding: 40px 10px;
+    background-color: #b74b4b;
+    border-top: 3px dashed #fff;
+}
+
+.plush h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: "Babylonica", cursive;
+    letter-spacing: 0.5rem;
+    color: #161616;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.plush h2 {
+    font-size: 3rem;    
+    font-weight: 600;    
+    line-height: 1.3;
+    font-family: "Babylonica", cursive;
+    color: black;    
+    text-align: center;
+    margin-bottom: 0.5px;
+}
+
+.plush-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.plush-item {
+    background-color: #fff;
+    border-radius: 25px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    position: relative;    
+    box-shadow: 0 6px 18px rgba(228, 193, 182, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plush-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(228, 193, 182, 0.5);
+}
+
+.plush-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.plush-item p {
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 1.6;
+    font-family: "Klee One", cursive;
+}
+
+.plush-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 5px;
+    background-color: #e4c1b6;
+    border-radius: 8px;
+}
